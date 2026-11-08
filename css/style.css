@@ -1,1 +1,28 @@
-/* Add any custom CSS stylings you want here */
+body {
+  background-color: #f3f7f4;
+  color: #203d2c;
+}
+.search-box {
+  max-width: 540px;
+}
+.btn-primary {
+  background-color: #226643;
+  border-color: #226643;
+}
+.btn-primary:hover {
+  background-color: #194d32;
+  border-color: #194d32;
+}
+#gif-container img {
+  height: 190px;
+  object-fit: contain;
+}
+footer {
+  font-size: 0.85rem;
+}
+@media (max-width: 576px) {
+  #gif-container img {
+    width: 50%;
+    height: 150px;
+  }
+}/* Add any custom CSS stylings you want here */

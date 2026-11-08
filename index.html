@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Assignment #9: Giphy API</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link href = "./css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container my-5">
-      <h1 class="mb-4 text-center">Fetch a Gif</h1>
-      <!-- Stretch: Add search functionality by commenting out the <div> element below -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GIF Finder</title>
 
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-6">
-          <input type="text" id="search-input" class="form-control" placeholder="Search for a GIF">
-        </div>
-      </div>
-      
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link href="./css/style.css" rel="stylesheet">
+</head>
 
-      <!-- <div class="d-flex justify-content-center mb-4">
-        <button id="fetch-gif-btn" class="btn btn-primary">
-          Fetch a GIF
-        </button>
-      </div> -->
+<body>
+  <main class="container my-5">
+    <h1 class="text-center">GIF Finder</h1>
+    <p class="text-center">
+      Find a GIF for any mood. Try golf, cats, or happy!
+    </p>
 
-      <div id="gif-container" class="row">
-        <!-- Output your gifs here -->
-      </div>
+    <div class="search-box mx-auto mb-4">
+      <label for="api-key" class="form-label">Giphy API key</label>
+      <input
+        type="password"
+        id="api-key"
+        class="form-control mb-2"
+        autocomplete="off"
+        aria-describedby="key-help"
+      >
+
+      <p id="key-help" class="small">
+        Enter your key from
+        <a
+          href="https://developers.giphy.com/dashboard/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Giphy Developers</a>.
+        Your key is not saved by this page.
+      </p>
+
+      <label for="search-input" class="form-label">
+        Search for a GIF
+      </label>
+      <input
+        type="search"
+        id="search-input"
+        class="form-control mb-3"
+        placeholder="Try golf"
+      >
+
+      <button
+        type="button"
+        id="fetch-gif-btn"
+        class="btn btn-primary w-100"
+      >
+        Fetch a GIF
+      </button>
     </div>
 
-    <script src="./js/script.js"></script>
-  </body>
+    <p id="status" role="status" class="text-center">
+      Enter your API key, then click the button to get started.
+    </p>
+
+    <div
+      id="gif-container"
+      class="row"
+      aria-label="GIF results"
+    ></div>
+
+    <footer class="text-center mt-4">Powered by GIPHY</footer>
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
 </html>
