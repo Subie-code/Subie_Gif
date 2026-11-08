@@ -10,7 +10,7 @@ button.addEventListener("click", async function () {
 
   // Use golf if the search box is empty.
   if (search === "") {
-    search = "golf";
+    search = "Cat";
   }
 
   if (apiKey === "") {
